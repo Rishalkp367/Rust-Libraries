@@ -1,17 +1,11 @@
 //! This is a library for basic mathematical utilities.
 /// It includes functions for arithmetic operations, number checks.
-/// 
-/// 
+///
+///
 /// Additional functions can be added as needed.
 /// # Functions Included
 /// 1. Arithmetic operations: add, subtract, multiply, divide, power, abs, max, min
-/// 2. Number checks: is_even, is_odd, is_prime, gcd, lcm, factorial    
-/// # Examples
-/// ```
-/// use math_utils::add;
-/// let sum = add(2, 3);
-/// assert_eq!(sum, 5);
-/// ```
+/// 2. Number checks: is_even, is_odd, is_prime, gcd, lcm, factorial
 ///
 /// # Additional Functions that can be implemented
 /// 3. Rounding & Measurement
@@ -21,6 +15,7 @@
 /// 7. Algebra / Utility
 
 // 1.Arithmetic operations
+
 pub fn add(a: i32, b: i32) -> i32 {
     a + b
 }
@@ -204,5 +199,38 @@ mod tests {
     #[test]
     fn test_min() {
         assert_eq!(min(5, 10), 5)
+    }
+
+    #[test]
+    fn test_is_even() {
+        assert!(is_even(4), "4 should be even");
+        assert!(!is_even(5), "5 should not be even");
+    }
+
+    #[test]
+    fn test_is_odd() {
+        assert!(is_odd(5), "5 should be odd");
+        assert!(!is_odd(4), "4 should not be odd");
+    }
+
+    #[test]
+    fn test_is_prime() {
+        assert!(is_prime(7), "7 should be prime");
+        assert!(!is_prime(8), "8 should not be prime");
+    }
+
+    #[test]
+    fn test_gcd() {
+        assert_eq!(gcd(54, 24), 6);
+    }
+
+    #[test]
+    fn test_lcm() {
+        assert_eq!(lcm(4, 5), 20);
+    }
+
+    #[test]
+    fn test_factorial() {
+        assert_eq!(factorial(5), 120);
     }
 }
